@@ -19,8 +19,12 @@ docker-compose up
    - Database username: `lychee`
    - Database password: `lychee`
 
+![database-connection](https://github.com/jahurtado/docker-lychee-nikon-nef/raw/master/doc/lychee_init.png)
+
 3. Enter username/password:
    - username: `lychee`
    - password: `lychee`
+
+![login](https://github.com/jahurtado/docker-lychee-nikon-nef/raw/master/doc/lychee_login.png)
 
 _NOTE_: By default, all your data will be located in `${HOME}/lychee`. You can set your custom directories and database user/password by editing `docker-compose.yml`.
