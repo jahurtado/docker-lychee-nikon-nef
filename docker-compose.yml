@@ -1,0 +1,22 @@
+lycheemysql:
+  image: mysql:5.5
+  volumes:
+    - /home/jose/barebone/lychee/mysql/:/var/lib/mysql
+  environment:
+    - MYSQL_ROOT_PASSWORD=lychee
+    - MYSQL_DATABASE=lychee
+    - MYSQL_USER=lychee
+    - MYSQL_PASSWORD=lychee
+
+lychee:
+  build: .
+  links:
+    - lycheemysql:mysql
+  volumes:
+    - ${HOME}/lychee/uploads:/uploads
+    - ${HOME}/lychee/data:/data
+  environment:
+    - PUID=1000
+    - PGID=1000
+  ports:
+    - 80:80
