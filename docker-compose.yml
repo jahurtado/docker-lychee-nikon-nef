@@ -1,7 +1,7 @@
 lycheemysql:
   image: mysql:5.5
   volumes:
-    - /home/jose/barebone/lychee/mysql/:/var/lib/mysql
+    - ${HOME}/lychee/mysql/:/var/lib/mysql
   environment:
     - MYSQL_ROOT_PASSWORD=lychee
     - MYSQL_DATABASE=lychee
